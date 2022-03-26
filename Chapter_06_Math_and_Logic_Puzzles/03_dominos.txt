@@ -1,0 +1,9 @@
+6.3 Dominos: There is an 8x8 chessboard in which two diagonally opposite corners have been cut off.
+You are given 31 dominos, and a single domino can cover exactly two squares. Can you use the 31 dominos
+to cover the entire board? Prove your answer (by providing an example or showing why it's impossible).
+
+---
+- No matter how you position a domino it will always cover one black and one while square
+- The 2 corners that have been cut off are of the same color (i.e. either both black or both white) which means the 
+board will have either 30 black and 32 white squares or 32 black and 30 white ones
+- After putting 30 dominos on the board we will end up with 2 uncovered squares of the same color which means that the remaining piece can not cover both of them

@@ -1,0 +1,30 @@
+6.10 Poison: You have 1000 bottles of soda, and exactly one is poisoned. 
+You have 10 test strips which can be used to detect poison. A single drop 
+of poison will turn the test strip positive permanently. You can put any 
+number of drops on a test strip at once and you can reuse a test strip as 
+many times as you'd like (as long as the results are negative). However, 
+you can only run tests once per day and it takes seven days to return a result. 
+How would you figure out the poisoned bottle in as few days as possible?
+
+FOLLOW UP
+Write code to simulate your approach.
+
+---
+- Step 1: 1000 bottles, 10 test strips
+Use 10 strips to test 90 bottles each and leave 100 bottles aside. Move to 2a, if 
+any strip turns positive, otherwise move to 2b.
+
+- Step 2a: 90 bottles, 9 test strips
+Use 9 strips to test 9 bottles each and leave 9 bottles aside. Move to 3a, if 
+any strip turns positive, otherwise move to 3b.
+
+- Step 2b: 100 bottles, 10 test strips
+Use 10 strips to test 9 bottles each and leave 10 bottles aside. Move to 3a, if 
+any strip turns positive, otherwise move to 3b.
+
+- Step 3a: 9 bottles, 8 test strips
+Use 8 strips to test 9 bottles each and leave 1 bottle aside. If a strip turns 
+positive, corresponding bottle was poisoned. If not, the bottle left aside was poisoned.
+
+- Step 3b: 10 bottles, 10 test strips
+Use 10 strips to test 10 bottles. A strip that turns positive indicates which bottle was poisoned.

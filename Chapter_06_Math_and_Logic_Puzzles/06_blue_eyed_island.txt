@@ -1,0 +1,23 @@
+6.6 Blue-Eyed Island: A bunch of people are living on an island, when a visitor comes 
+with a strange order: all blue-eyed people must leave the island as soon as possible. 
+There will be a flight out at 8:00 pm every evening. Each person can see everyone else's eye color, 
+but they do not know their own (nor is anyone allowed to tell them). Additionally, they do not know 
+how many people have blue eyes, although they do know that at least one person does. How many days 
+will it take the blue-eyed people to leave?
+
+---
+- Let's assume there is a single blue-eyed person on the island. This person will see everyone else's 
+eye color  and know it's not blue therefore it must be them who are blue-eyed. Thus they will leave.
+
+- If there are 2 blue-eyed people, they would see each other's eye color as well as everyone else's. 
+There will not be sufficient information to conclude that anyone should leave on the first day, so 
+no one leaves. Each blue-eyed person knows that there is either one or two blue-eyed people. If there 
+was just one, they would have left on the first day but they didn't which means there are two. They 
+both leave as a result.
+
+- Following the same thought process, in case there are 3 blue-eyed people, no one will leave on first 
+two days as each of them wouldn't know if there are 2 or 3 blue-eyed folks. On the third day though they 
+will realize that there must be 3 of them as the other 2 would have left on the second day otherwise. 
+They will leave as a result.
+
+- It will take N days for the blue-eyed people to leave if there is N of them on the island.

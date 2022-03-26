@@ -1,0 +1,21 @@
+6.8 The Egg Drop Problem: There is a building of 100 floors. If an egg drops from 
+the Nth floor or above, it will break. If it's dropped from any floor below, it will 
+not break. You're given two eggs. Find N, while minimizing the number of drops for 
+the worst case.
+
+---
+- Option 1: drop the first egg from the 1st floor. If it doesn't break, move on to the 2nd floor, 
+and so on. It will take 100 drops to find N
+- Option 2: drop the first egg from the 50th floor. If it breaks, start dropping the second 
+one from from the 1st floor and move up one floor at a time. If the first egg breaks, start 
+dropping the second one from the 51st floor. It will take 51 drops to find N
+- Option 3: drop the first egg from the 10th floor, then 20th, 30th, and so on. Drop 
+the second one from the last floor that didn't break the first egg + 1 and move one 
+floor at a time. It will take 19 drops to find N
+- Option 4: drop the first egg from the 19th floor and decrease the step by 1: 19, 37, 54, 70, 
+85, 99. It will still take 19 drops but there's room for optimization
+- Starting from the 16th floor results in 16 drops
+- Starting from the 15th floor results in 15 drops
+- Starting from the 14th floor results in 14 drops <- optimal strategy
+- Starting from the 13th floor results in 22 drops
+- Starting from the 12th floor results in 34 drops

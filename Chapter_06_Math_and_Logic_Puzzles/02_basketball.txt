@@ -1,0 +1,27 @@
+6.2 Basketball: You have a basketball hoop and someone says that you can play one of two games.
+Game 1: You get one shot to make the hoop.
+Game 2: You get three shots and you have to make two of three shots.
+If p is the probability of making a particular shot, for which values of p should you pick one 
+game or the other?
+
+---
+- Probability of winning game 1 is p
+- Probability of winning gate 2 is 4 * p^3
+
+shot_1 shot_2 shot_3 | prob
+---------------------+-----
+     0      0      0 | p^3 
+     0      0      1 | p^3 
+     0      1      0 | p^3 
+     0      1      1 | p^3 <- win
+     1      0      0 | p^3 
+     1      0      1 | p^3 <- win
+     1      1      0 | p^3 <- win
+     1      1      1 | p^3 <- win
+
+- In order to decide when to pick first game over the second one we need to solve inequality: 
+p > 4 * p^3
+p^2 < 0.25
+p < 0.5
+
+- Pick game 1 if p < 0.5, otherwise pick game 2

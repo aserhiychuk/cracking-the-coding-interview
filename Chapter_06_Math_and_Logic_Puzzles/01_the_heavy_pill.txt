@@ -1,0 +1,14 @@
+6.1 The Heavy Pill: You have 20 bottles of pills. 19 bottles have 1.0 gram pills, but one has
+pills of weight 1.1 grams. Given a scale that provides an exact measurement, how would you
+find the heavy bottle? You can only use the scale once.
+
+---
+- Take 1 pill from the first bottle, 2 pills from the second one, 3 pills from the third one, and so on and
+put them all on the scale.
+- If all pills had the same weight the expected result would have been 1 + 2 + 3 + ... + 20 = 210
+- The actual result will be greater than that and the difference will point you to the heavy bottle
+- For example, if the third bottle has 1.1 gram pills, here are the step to identify it:
+    1) expected = 1 + 2 + 3 + 4 + ... + 20 = 210
+    2) actual = 1 + 2 + 3.3 + 4 + ... + 20 = 210.3
+    3) difference = actual - expected = 210.3 - 210 = 0.3
+    4) bottle number = 0.3 * 10 = 3

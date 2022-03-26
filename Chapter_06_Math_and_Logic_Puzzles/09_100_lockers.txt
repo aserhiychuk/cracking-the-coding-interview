@@ -1,0 +1,32 @@
+6.9 100 Lockers: There are 100 closed lockers in a hallway. A man begins by opening 
+all 100 lockers. Next, he closes every second locker. Then, on his third pass, he 
+toggles every third locker (closes it if it is open or opens it if it is closed). 
+This process continues for 100 passes, such that on each pass i, the man toggles every 
+i-th locker. After his 100th pass in the hallway, in which he toggles only locker #100, 
+how many lockers are open?
+
+---
+- A locker will be open after the 100th pass if it was toggled odd number of times
+- Locker #N will be toggled on the i-th pass if "i" divides "N"
+- The number of open lockers will be equal to the number of numbers between 1 and 100 
+which have odd number of divisors
+- Most numbers have even number of divisors because if a divides N than there is another 
+number b such that N = a * b. 
+For example, 
+12 = 2 * 6 = 3 * 4
+20 = 2 * 10 = 4 * 5
+- There number that have odd number of divisors though: 4 = 2 * 2, 9 = 3 * 3, etc.
+- 9 lockers will end up being open: 1st, 4th, 9th, 16th, 25th, 36th, 49th, 64th, and 81st
+
+ number | divisors
+--------+---------------------
+      1 | 1
+      4 | 2
+      9 | 3
+     16 | 2, 4, 8
+     25 | 5
+     36 | 2, 3, 6, 12, 18
+     49 | 7
+     64 | 2, 4, 8, 16, 32
+     81 | 3, 9, 27
+    100 | 2, 5, 10, 20, 25, 50   <- even number of divisors
